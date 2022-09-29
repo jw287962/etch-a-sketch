@@ -2,7 +2,6 @@
 
 
 
-
 let divContainer = document.querySelector('.containerGrid');
 
 makeGrid(16);
@@ -30,10 +29,25 @@ function sketchHover(){
 
 function hovered(e){
     e.stopPropagation();
+    if(this.classList.value === 'grid'){
+ this.style.backgroundColor = '#ffcccc';
+ this.classList.add('one');
+    }else if(this.classList.value === 'grid one'){
+    this.style.backgroundColor = '#ff9999'
+    this.classList.remove('one');
+    this.classList.add('two');
+}else if(this.classList.value === ('two')){
+    this.style.backgroundColor = '#ff6666'
+    this.classList.remove('two');
+    this.classList.add('three');
+}
+else{
+    this.style.backgroundColor = 'red'
+}
  
+/*
 
-
-  if(this.classList.value === 'grid hovered'){
+  if(this.classList.value){
 this.classList.remove("hovered");
   this.classList.add('fifty');
 } else if(this.classList.value === 'grid fifty'){
@@ -45,7 +59,7 @@ this.classList.remove("hovered");
 else {
     this.classList.add('hovered');
 }
-
+*/
 }
 
 function makeGrid(boxesNumber){
