@@ -1,0 +1,27 @@
+
+.containerAll{
+    max-height: 1000px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: fit-content;
+}
+
+.container{
+   
+    display: flex;
+    flex-wrap: wrap;
+     flex-direction: column;
+     
+ }
+.grid{
+    
+    min-height: 10px;
+    min-width: 10px;
+border-style: solid;
+display: flex;
+}
+.hovered{
+    background-color: red;
+}
+
