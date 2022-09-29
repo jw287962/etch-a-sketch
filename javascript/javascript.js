@@ -31,8 +31,20 @@ function sketchHover(){
 function hovered(e){
     e.stopPropagation();
  
- this.classList.add('hovered');
-  
+
+
+  if(this.classList.value === 'grid hovered'){
+this.classList.remove("hovered");
+  this.classList.add('fifty');
+} else if(this.classList.value === 'grid fifty'){
+    this.classList.remove("fifty");
+    this.classList.add('hundred');
+
+}
+
+else {
+    this.classList.add('hovered');
+}
 
 }
 
