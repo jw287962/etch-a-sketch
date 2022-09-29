@@ -3,7 +3,7 @@
 
 
 
-let divContainer = document.querySelector('.containerAll');
+let divContainer = document.querySelector('.containerGrid');
 
 makeGrid(16);
 sketchHover();
@@ -52,13 +52,17 @@ for(i = 0; i<boxesNumber; i++){
 
 
 function makeNewGrid(){
-let num = prompt("Enter A NUMBER (LESS THAN 100)")
+let num = prompt("Enter A NUMBER (MAX: 100)")
 if (num >= 100)
 num = 100;
-
+if(num){
 removeOldGrid();
 makeGrid(num);
 sketchHover();
+}
+else num = 0;
+
+
 }
 
 function removeOldGrid(){
